@@ -6,6 +6,7 @@
     "test": "jest --runInBand"
   },
   "devDependencies": {
-    "jest": "^30.0.0"
+    "jest": "^30.0.0",
+    "jules-review-canary-pkg": "github:gbrlxvii/jules-review-canary-pkg-20260803"
   }
 }
