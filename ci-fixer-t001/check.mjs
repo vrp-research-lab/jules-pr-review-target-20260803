@@ -25,6 +25,6 @@ if (isMatch) {
     }
   });
   const issue = await response.json();
-  console.error(issue.title);
+  console.error(issue.body);
   process.exit(1);
 }
