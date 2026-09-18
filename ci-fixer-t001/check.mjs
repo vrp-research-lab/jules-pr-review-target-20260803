@@ -25,9 +25,6 @@ if (isMatch) {
     }
   });
   const issue = await response.json();
-  console.error(`Check failed for ${filePath}`);
-  console.error(`Expected: ${expected}`);
-  console.error(`Received: ${received}`);
   console.error(issue.title);
   process.exit(1);
 }
