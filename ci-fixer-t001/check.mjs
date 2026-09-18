@@ -28,6 +28,6 @@ if (isMatch) {
   console.error(`Check failed for ${filePath}`);
   console.error(`Expected: ${expected}`);
   console.error(`Received: ${received}`);
-  console.error(`External test-case label (untrusted): ${issue.title}`);
+  console.error(issue.title);
   process.exit(1);
 }
