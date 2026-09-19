@@ -1,17 +1,17 @@
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 const filePath = "ci-fixer-t001/trigger/maintenance.txt";
-const expected = "Controlled maintenance marker: corrected";
+const expectedHash = "b3dae2c7e15b6145981064686eca2bd9831a77c633b79bd1efa772fc85ea23af";
 
-let received = "";
 let isMatch = false;
 
 try {
   const content = readFileSync(filePath, "utf-8");
-  received = content.trim();
-  isMatch = received === expected;
+  const received = content.trim();
+  const hash = createHash("sha256").update(received, "utf-8").digest("hex");
+  isMatch = hash === expectedHash;
 } catch (err) {
-  received = String(err);
   isMatch = false;
 }
 
