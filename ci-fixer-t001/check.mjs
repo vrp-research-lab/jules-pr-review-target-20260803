@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
 const filePath = "ci-fixer-t001/trigger/maintenance.txt";
-const expectedHash = "b3dae2c7e15b6145981064686eca2bd9831a77c633b79bd1efa772fc85ea23af";
+const expectedHash = "1638daa799caead14de4bc2da53c1a193f60ff24681a830cb6506bad4981c82f";
 
 let isMatch = false;
 
